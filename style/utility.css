@@ -1,0 +1,11 @@
+.flex {
+  display: flex;
+}
+.flex-jc {
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--linear-botao);
+  padding: .5rem;
+}

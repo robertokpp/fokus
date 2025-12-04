@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* TIPOGRAFIA */
+  --font-family: "Unbounded";
+  --font-family-two: "Montserrat";
+  --Heading-display: normal 4.3rem/1.5 var(--font-family);
+  --Heading-large: normal 2.986rem/1.2 var(--font-family);
+  --Heading: normal 2.488rem/1.2 var(--font-family);
+  --Heading-small: normal 2.074rem/1.2 var(--font-family);
+  --Subtitle-large: normal 1.728rem/1.2 var(--font-family);
+  --Subtitle: normal 1.44rem/1.2 var(--font-family);
+  --Paragraph-large: normal 1.2rem/1.5 var(--font-family-two);
+  --Paragraph: normal 1rem/1.5 var(--font-family-two);
+  --Paragraph-small: normal 0.833rem/1.5 var(--font-family-two);
+  --Label: normal 0.694rem/1.5 var(--font-family-two);
+
+  /* CORES */
+
+  --linear-focos: linear-gradient(
+    0deg,
+    rgba(139, 31, 248, 1) 0%,
+    rgba(4, 24, 50, 1) 48%,
+    rgba(1, 8, 14, 1) 100%
+  );
+  --liner-verde: linear-gradient(
+    0deg,
+    rgba(15, 114, 92, 1) 0%,
+    rgba(4, 24, 50, 1) 48%,
+    rgba(1, 8, 14, 1) 100%
+  );
+  --linear-azul: linear-gradient(
+    0deg,
+    rgba(24, 117, 233, 1) 0%,
+    rgba(4, 24, 50, 1) 48%,
+    rgba(1, 8, 14, 1) 100%
+  );
+  --linear-botao: linear-gradient(
+    0deg,
+    rgba(184, 114, 239, 1) 0%,
+    rgba(20, 68, 128, 1) 100%
+  );
+  --lilas: #b872ff;
+  --azul-profundo: #01080e;
+  --azul-medio: #041832;
+  --azul-royal: #144480;
+  --fundo-cards: #98a0a8;
+  --fundo-cronometro: #144480;
+  --fundo-tarefas: #00f4bf;
+  --check: #02cda1;
+}
+
+body {
+  background: black;
+  color: antiquewhite;
+}
+
+
+p {
+  font: var(--Heading-large);
+  & span {
+    font: 900 53px/1.5 var(--font-family);
+  }
+}
