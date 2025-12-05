@@ -1,6 +1,13 @@
 .container {
   margin: auto;
-  max-width: 1000px;
+  max-width: 1200px;
+}
+
+@media (width < 1000px) {
+  .container {
+    width: 100%;
+    padding: 2rem;
+  }
 }
 
 .logo {
@@ -12,7 +19,7 @@
 
 .panel-text {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 5rem;
   p {
@@ -28,7 +35,7 @@
   padding-inline: 4rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
   & .modo {
     display: flex;
     gap: 1.5rem;
@@ -45,9 +52,16 @@
     }
   }
 
-  & #panel-hour{
-    & span{
+  & #panel-hour {
+    & span {
       font: 800 112px var(--font-family);
     }
+  }
+  .toggle-musictext{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-self: center;
+    font: var(--Paragraph);
   }
 }

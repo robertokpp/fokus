@@ -6,6 +6,54 @@
 }
 
 .btn-primary {
-  background: var(--linear-botao);
-  padding: .5rem;
+  background: var(--linear-botao) no-repeat;
+  padding-block: 0.5rem;
+  padding-inline: 2rem;
+  display: flex;
+  justify-self: center;
+  gap: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  font: var(--Paragraph-large);
+  color: #ffffff;
+  cursor: pointer;
+  margin-block: 1.5rem;
+}
+.btn-primary:hover {
+  border: 1px solid #ffffff;
+}
+
+.toggle {
+  display: flex;
+  justify-self: center;
+  
+  #music{
+    display: none;
+  }
+  & .switch {
+    width: 60px;
+    height: 32px;
+    background: #1b293b;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 999px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    & .slider {
+      background: #ffffff;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 999px;
+      margin: 4px;
+      transition: 0.5s ease-in-out;
+    }
+  }
+  & #music:checked ~ label {
+    background: var(--lilas);
+    .slider{
+      transform: translate(28px);
+    }
+  }
+
 }

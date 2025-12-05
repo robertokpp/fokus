@@ -23,9 +23,9 @@
 
   --linear-focos: linear-gradient(
     0deg,
-    rgba(139, 31, 248, 1) 0%,
+    rgba(1, 8, 14, 1) 0%,
     rgba(4, 24, 50, 1) 48%,
-    rgba(1, 8, 14, 1) 100%
+    rgba(139, 31, 248, 1) 100%
   );
   --liner-verde: linear-gradient(
     0deg,
@@ -55,10 +55,10 @@
 }
 
 body {
-  background: black;
-  color: antiquewhite;
+  background: var(--linear-focos) no-repeat;
+  color: #ffffff;
+  height: 100vh;
 }
-
 
 p {
   font: var(--Heading-large);
