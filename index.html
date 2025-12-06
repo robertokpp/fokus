@@ -39,7 +39,7 @@
 
         <div>
           <div id="panel-hour">
-            <span>25:00</span>
+            <span id="time-id"></span>
           </div>
           <div class="toggle-musictext">
             <div class="toggle">
@@ -47,11 +47,14 @@
               <label for="music" class="switch">
                 <span class="slider"></span>
               </label>
+              <audio
+                id="music-Foco"
+                loop
+                src="assets/Músicas e sons/Opções música foco/Intra-Neural.mp3"
+              ></audio>
             </div>
-
             <span class="music-text">Musica</span>
           </div>
-
           <button class="btn-primary" type="button" id="start">
             <img src="assets/Ícones/play_arrow.svg" alt="" />
             Começa
@@ -59,8 +62,6 @@
         </div>
       </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"></script>
     <script type="module" src="main.js"></script>
   </body>
 </html>

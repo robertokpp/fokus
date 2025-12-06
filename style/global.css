@@ -55,7 +55,7 @@
 }
 
 body {
-  background: var(--linear-focos) no-repeat;
+  background: var(--linear-focos);
   color: #ffffff;
   height: 100vh;
 }

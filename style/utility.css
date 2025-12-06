@@ -13,12 +13,13 @@
   justify-self: center;
   gap: 0.5rem;
   border: 1px solid transparent;
-  border-radius: 2rem;
+  border-radius: 999px;
   font: var(--Paragraph-large);
   color: #ffffff;
   cursor: pointer;
   margin-block: 1.5rem;
 }
+
 .btn-primary:hover {
   border: 1px solid #ffffff;
 }
