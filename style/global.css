@@ -55,10 +55,9 @@
 }
 
 body {
-  background: var(--linear-focos) no-repeat;
+  background-image: var(--linear-focos);
   color: #ffffff;
-  height: 100vh;
-}
+  }
 
 p {
   font: var(--Heading-large);

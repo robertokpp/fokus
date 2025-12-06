@@ -42,12 +42,15 @@
     justify-content: center;
     font: var(--Paragraph);
     padding: 1.5rem;
-    & span {
+    & button {
       padding: 0.5rem;
+      background: none;
+      border: none;
+      color: #ffffff;
       border-radius: 0.5rem;
       cursor: pointer;
     }
-    & span:hover {
+    & button:hover {
       background: var(--azul-royal);
     }
   }
