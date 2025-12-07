@@ -21,13 +21,15 @@
       <img src="assets/Logo e Favicons/Logo.png" alt="logo do projeto" />
     </div>
 
-    <section>
-      <div class="container panel-text">
+    <section class="container">
+      <div class="panel-text">
         <p>
-          Otimize sua produtividade,
+          Otimize sua produtividade,<br>
           <span>mergulhe no que importa</span>
         </p>
-        <img src="assets/Imagens/Imagem foco.png" alt="" />
+        <div>
+          <img src="assets/Imagens/Imagem foco.png" alt="" />
+        </div>
       </div>
 
       <div id="main-panel" class="container">
@@ -39,7 +41,7 @@
 
         <div>
           <div id="panel-hour">
-            <span id="time" ></span>
+            <span id="time"></span>
           </div>
           <div class="toggle-musictext">
             <div class="toggle">
@@ -47,20 +49,31 @@
               <label for="music" class="switch">
                 <span class="slider"></span>
               </label>
+              <audio
+                id="audio-foco"
+                loop
+                src="assets/Músicas e sons/Opções música foco/Intra-Neural.mp3"
+              ></audio>
             </div>
-
             <span class="music-text">Musica</span>
           </div>
 
-          <button class="btn-primary" type="button" id="start">
+          <button class="btn-primary" id="btn-primary" type="button" id="start">
             <img src="assets/Ícones/play_arrow.svg" alt="" />
             Começa
+          </button>
+          <button
+            class="btn-primary display-none"
+            id="btn-pause"
+            type="button"
+            id="start"
+          >
+            <img src="assets/Ícones/play_arrow.svg" alt="" />
+            Pause
           </button>
         </div>
       </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"></script>
     <script type="module" src="main.js"></script>
   </body>
 </html>

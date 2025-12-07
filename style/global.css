@@ -57,11 +57,20 @@
 body {
   background-image: var(--linear-focos);
   color: #ffffff;
-  }
+}
 
 p {
   font: var(--Heading-large);
   & span {
-    font: 900 53px/1.5 var(--font-family);
+    font: 900 45px/1.5 var(--font-family);
+  }
+}
+
+@media (width < 1000px) {
+  p {
+    font: var(--Heading-small);
+    & span {
+      font: 900 30px/1.5 var(--font-family);
+    }
   }
 }
