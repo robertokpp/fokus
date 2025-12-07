@@ -17,19 +17,18 @@
     <title>Fokus</title>
   </head>
   <body>
-    <div class="logo container">
+    <div class="logo">
       <img src="assets/Logo e Favicons/Logo.png" alt="logo do projeto" />
     </div>
 
     <section class="container">
       <div class="panel-text">
         <p>
-          Otimize sua produtividade,<br>
+          Otimize sua produtividade,<br />
           <span>mergulhe no que importa</span>
         </p>
-        <div>
-          <img src="assets/Imagens/Imagem foco.png" alt="" />
-        </div>
+
+        <img src="assets/Imagens/Imagem foco.png" alt="" />
       </div>
 
       <div id="main-panel" class="container">
@@ -39,25 +38,25 @@
           <button id="longe-rest">Descanso longo</button>
         </div>
 
-        <div>
-          <div id="panel-hour">
-            <span id="time"></span>
+        <div id="panel-hour">
+          <span id="time"></span>
+        </div>
+        <dsiv class="toggle-musictext">
+          <div class="toggle">
+            <input type="checkbox" name="music" id="music" />
+            <label for="music" class="switch">
+              <span class="slider"></span>
+            </label>
+            <audio
+              id="audio-foco"
+              loop
+              src="assets/Músicas e sons/Opções música foco/Intra-Neural.mp3"
+            ></audio>
           </div>
-          <div class="toggle-musictext">
-            <div class="toggle">
-              <input type="checkbox" name="music" id="music" />
-              <label for="music" class="switch">
-                <span class="slider"></span>
-              </label>
-              <audio
-                id="audio-foco"
-                loop
-                src="assets/Músicas e sons/Opções música foco/Intra-Neural.mp3"
-              ></audio>
-            </div>
-            <span class="music-text">Musica</span>
-          </div>
+          <span class="music-text">Musica</span>
+        </dsiv>
 
+        <div>
           <button class="btn-primary" id="btn-primary" type="button" id="start">
             <img src="assets/Ícones/play_arrow.svg" alt="" />
             Começa
