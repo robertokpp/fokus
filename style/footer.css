@@ -1,0 +1,6 @@
+footer{
+  text-align: center;
+  font:var(--Paragraph-small);
+  background-color: var(--azul-medio);
+  padding: 1rem;
+}

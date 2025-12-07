@@ -20,59 +20,72 @@
     <div class="logo">
       <img src="assets/Logo e Favicons/Logo.png" alt="logo do projeto" />
     </div>
+    <div class="backgroud">
+      <section class="container">
+        <div class="panel-text">
+          <p>
+            Otimize sua produtividade,<br />
+            <span>mergulhe no que importa</span>
+          </p>
 
-    <section class="container">
-      <div class="panel-text">
-        <p>
-          Otimize sua produtividade,<br />
-          <span>mergulhe no que importa</span>
-        </p>
-
-        <img src="assets/Imagens/Imagem foco.png" alt="" />
-      </div>
-
-      <div id="main-panel" class="container">
-        <div class="modo">
-          <button id="foco">Foco</button>
-          <button id="short-rest">Descanso curto</button>
-          <button id="longe-rest">Descanso longo</button>
+          <img src="assets/Imagens/Imagem foco.png" alt="" />
         </div>
 
-        <div id="panel-hour">
-          <span id="time"></span>
-        </div>
-        <dsiv class="toggle-musictext">
-          <div class="toggle">
-            <input type="checkbox" name="music" id="music" />
-            <label for="music" class="switch">
-              <span class="slider"></span>
-            </label>
-            <audio
-              id="audio-foco"
-              loop
-              src="assets/Músicas e sons/Opções música foco/Intra-Neural.mp3"
-            ></audio>
+        <div id="main-panel" class="container">
+          <div class="modo">
+            <button id="foco">Foco</button>
+            <button id="short-rest">Descanso curto</button>
+            <button id="longe-rest">Descanso longo</button>
           </div>
-          <span class="music-text">Musica</span>
-        </dsiv>
 
-        <div>
-          <button class="btn-primary" id="btn-primary" type="button" id="start">
-            <img src="assets/Ícones/play_arrow.svg" alt="" />
-            Começa
-          </button>
-          <button
-            class="btn-primary display-none"
-            id="btn-pause"
-            type="button"
-            id="start"
-          >
-            <img src="assets/Ícones/play_arrow.svg" alt="" />
-            Pause
-          </button>
+          <div id="panel-hour">
+            <span id="time"></span>
+          </div>
+          <dsiv class="toggle-musictext">
+            <div class="toggle">
+              <input type="checkbox" name="music" id="music" />
+              <label for="music" class="switch">
+                <span class="slider"></span>
+              </label>
+              <audio
+                id="audio-foco"
+                loop
+                src="assets/Músicas e sons/Opções música foco/Intra-Neural.mp3"
+              ></audio>
+            </div>
+            <span class="music-text">Musica</span>
+          </dsiv>
+
+          <div>
+            <button
+              class="btn-primary"
+              id="btn-primary"
+              type="button"
+              id="start"
+            >
+              <img src="assets/Ícones/play_arrow.svg" alt="" />
+              Começa
+            </button>
+            <button
+              class="btn-primary display-none"
+              id="btn-pause"
+              type="button"
+              id="start"
+            >
+              <img src="assets/Ícones/play_arrow.svg" alt="" />
+              Pause
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
+
+    <footer>
+      <p>
+        Projeto fictício e sem fins comerciais. Imagens geradas por IA no Adobe
+        Firefly. <br />Desenvolvido por Alura.
+      </p>
+    </footer>
     <script type="module" src="main.js"></script>
   </body>
 </html>
