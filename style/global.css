@@ -55,14 +55,8 @@
 }
 
 body {
-  background: var(--linear-focos);
+  background-image: var(--linear-focos);
   color: #ffffff;
-  height: 100vh;
 }
 
-p {
-  font: var(--Heading-large);
-  & span {
-    font: 900 53px/1.5 var(--font-family);
-  }
-}
+

@@ -17,29 +17,29 @@
     <title>Fokus</title>
   </head>
   <body>
-    <div class="logo container">
+    <div class="logo">
       <img src="assets/Logo e Favicons/Logo.png" alt="logo do projeto" />
     </div>
+    <div class="backgroud">
+      <section class="container" id="section-time">
+        <header class="panel-text">
+          <p>
+            Otimize sua produtividade,<br />
+            <span>mergulhe no que importa</span>
+          </p>
 
-    <section>
-      <div class="container panel-text">
-        <p>
-          Otimize sua produtividade,
-          <span>mergulhe no que importa</span>
-        </p>
-        <img src="assets/Imagens/Imagem foco.png" alt="" />
-      </div>
+          <img src="assets/Imagens/Imagem foco.png" alt="" />
+        </header>
 
-      <div id="main-panel" class="container">
-        <div class="modo">
-          <span id="foco">Foco</span>
-          <span id="short-rest">Descanso curto</span>
-          <span id="longe-rest">Descanso longo</span>
-        </div>
+        <div id="main-panel" class="container">
+          <div class="modo">
+            <button id="foco">Foco</button>
+            <button id="short-rest">Descanso curto</button>
+            <button id="longe-rest">Descanso longo</button>
+          </div>
 
-        <div>
           <div id="panel-hour">
-            <span id="time-id"></span>
+            <span id="time"></span>
           </div>
           <div class="toggle-musictext">
             <div class="toggle">
@@ -55,13 +55,98 @@
             </div>
             <span class="music-text">Musica</span>
           </div>
-          <button class="btn-primary" type="button" id="start">
-            <img src="assets/Ícones/play_arrow.svg" alt="" />
-            Começa
-          </button>
+
+          <div>
+            <button
+              class="btn-primary"
+              id="btn-primary"
+              type="button"
+              id="start"
+            >
+              <img src="assets/Ícones/play_arrow.svg" alt="" />
+              Começa
+            </button>
+            <button
+              class="btn-primary display-none"
+              id="btn-pause"
+              type="button"
+              id="start"
+            >
+              <img src="assets/Ícones/play_arrow.svg" alt="" />
+              Pause
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
+
+        <!-- <div>
+          <span>#Em andamento:</span>
+          <span>Nome da tarefa em andamento</span>
+        </div> -->
+      </section>
+
+      <!-- <section class="container" id="section-tasks">
+        <header>
+          <span>Lista de tarefas:</span>
+          <img src="assets/Ícones/more_vert lilás.svg" alt="" />
+        </header>
+
+        <ul>
+
+          <li>
+            <div>
+              <img src="assets/Ícones/Check_branco.svg" alt="" />
+              <p>Tarefa pendente</p>
+            </div>
+
+            <div>
+              <img src="assets/Ícones/edit (1).png" alt="" />
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <img src="assets/Ícones/Check_branco.svg" alt="" />
+              <p>Tarefa pendente</p>
+            </div>
+
+            <div>
+              <img src="assets/Ícones/edit (1).png" alt="" />
+            </div>
+          </li>
+
+        </ul>
+        <div>
+          <span>Adicionando tarefa</span>
+          <textarea name="text-task" id="text-task"></textarea>
+          <div>
+            <div>
+              <button>
+                <img src="assets/Ícones/delete.svg" alt="" />
+                Deletar
+              </button>
+            </div>
+            <div>
+              <button>
+                <img src="assets/Ícones/close (1).svg" alt="" />
+                Cancelar
+              </button>
+              <button>
+                <img src="assets/Ícones/save_small.svg" alt="" />
+                Salvar
+              </button>
+            </div>
+          </div>
+        </div>
+        <button>Adicionar nova tarefa</button>
+      </section> -->
+    </div>
+
+    <footer>
+      <p>
+        Projeto fictício e sem fins comerciais. Imagens geradas por IA no Adobe
+        Firefly. <br />Desenvolvido por Roberto.
+      </p>
+    </footer>
     <script type="module" src="main.js"></script>
   </body>
 </html>

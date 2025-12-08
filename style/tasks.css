@@ -1,0 +1,47 @@
+#section-tasks {
+  width: 550px;
+  padding-block: 2rem;
+  & header {
+    display: flex;
+    justify-content: space-between;
+    font: var(--Heading-small);
+    & img{
+      width: 1.5rem;
+    }
+  }
+
+  & ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+
+    & li{
+      display: flex;
+      justify-content: space-between;
+      &:nth-child(1) > div{
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+        border: 1px solid red;
+      }
+    }
+  }
+
+
+
+
+}
+
+
+@media (width < 1000px) {
+#section-tasks {
+  width: 100%;
+}
+  & header {
+    justify-self: center;
+    & img{
+      display: none;
+    }
+  }
+}

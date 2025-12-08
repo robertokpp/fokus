@@ -27,8 +27,8 @@
 .toggle {
   display: flex;
   justify-self: center;
-  
-  #music{
+
+  #music {
     display: none;
   }
   & .switch {
@@ -52,9 +52,12 @@
   }
   & #music:checked ~ label {
     background: var(--lilas);
-    .slider{
+    .slider {
       transform: translate(28px);
     }
   }
+}
 
+.display-none {
+  display: none;  
 }
