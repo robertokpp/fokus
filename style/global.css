@@ -15,7 +15,7 @@
   --Subtitle-large: normal 1.728rem/1.2 var(--font-family);
   --Subtitle: normal 1.44rem/1.2 var(--font-family);
   --Paragraph-large: normal 1.2rem/1.5 var(--font-family-two);
-  --Paragraph: normal 1rem/1.5 var(--font-family-two);
+  --Paragraph: 1rem/1.5 var(--font-family-two);
   --Paragraph-small: normal 0.833rem/1.5 var(--font-family-two);
   --Label: normal 0.694rem/1.5 var(--font-family-two);
 

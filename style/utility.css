@@ -59,5 +59,43 @@
 }
 
 .display-none {
-  display: none;  
+  display: none;
+}
+
+& #btn-delete,
+#btn-cancel,
+#btn-save {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  font: var(--Paragraph);
+  font-weight: 600;
+}
+& #btn-delete,
+#btn-cancel {
+  background: none;
+  border: none;
+}
+& #btn-save {
+  border: 1px solid #000;
+  border-radius: 999px;
+  background-color: #000;
+  color: white;
+}
+
+#btn-addtask{
+  width: 100%;
+  padding: 1.25rem;
+  border-radius: 999px;
+  border: 2px solid var(--lilas);
+  color: var(--lilas);
+  background: none;
+  font: var(--Paragraph);
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  cursor: pointer;
 }

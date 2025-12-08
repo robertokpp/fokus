@@ -27,7 +27,6 @@
             Otimize sua produtividade,<br />
             <span>mergulhe no que importa</span>
           </p>
-
           <img src="assets/Imagens/Imagem foco.png" alt="" />
         </header>
 
@@ -72,7 +71,7 @@
               type="button"
               id="start"
             >
-              <img src="assets/Ícones/play_arrow.svg" alt="" />
+              <img src="assets/Ícones/pause.svg" alt="" />
               Pause
             </button>
           </div>
@@ -84,61 +83,61 @@
         </div> -->
       </section>
 
-      <!-- <section class="container" id="section-tasks">
-        <header>
+      <section class="container" id="section-tasks">
+        <header class="header-task">
           <span>Lista de tarefas:</span>
           <img src="assets/Ícones/more_vert lilás.svg" alt="" />
         </header>
 
-        <ul>
-
-          <li>
+        <ul class="list-task">
+          <li class="pending-task">
             <div>
               <img src="assets/Ícones/Check_branco.svg" alt="" />
               <p>Tarefa pendente</p>
             </div>
-
-            <div>
-              <img src="assets/Ícones/edit (1).png" alt="" />
-            </div>
+            <img src="assets/Ícones/edit.svg" alt="" />
           </li>
 
-          <li>
+          <li class="task-completed">
             <div>
               <img src="assets/Ícones/Check_branco.svg" alt="" />
               <p>Tarefa pendente</p>
             </div>
-
-            <div>
-              <img src="assets/Ícones/edit (1).png" alt="" />
-            </div>
+            <img src="assets/Ícones/edit.svg" alt="" />
           </li>
-
         </ul>
-        <div>
+
+        <div class="add-task">
           <span>Adicionando tarefa</span>
-          <textarea name="text-task" id="text-task"></textarea>
-          <div>
+          <textarea
+            name="text-task"
+            id="text-task"
+            placeholder="No que você está trabalhando?"
+            rows="6"
+          ></textarea>
+
+          <div class="button-task">
+            <button id="btn-delete">
+              <img src="assets/Ícones/delete.svg" alt="" />
+              Deletar
+            </button>
+
             <div>
-              <button>
-                <img src="assets/Ícones/delete.svg" alt="" />
-                Deletar
-              </button>
-            </div>
-            <div>
-              <button>
+              <button id="btn-cancel">
                 <img src="assets/Ícones/close (1).svg" alt="" />
                 Cancelar
               </button>
-              <button>
+              <button id="btn-save">
                 <img src="assets/Ícones/save_small.svg" alt="" />
                 Salvar
               </button>
             </div>
           </div>
         </div>
-        <button>Adicionar nova tarefa</button>
-      </section> -->
+        <button id="btn-addtask">
+          <img src="assets/Ícones/Add_lilás.png" alt="">
+          Adicionar nova tarefa</button>
+      </section>
     </div>
 
     <footer>
