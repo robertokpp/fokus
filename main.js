@@ -1,2 +1,2 @@
-import('./js/timer.js')
+import('./js/time.js')
 import('./js/audio.js')
