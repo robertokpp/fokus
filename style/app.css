@@ -16,7 +16,7 @@ section {
   }
 }
 
-.backgroud {
+& .backgroud {
   background-image: url(/assets/Imagens/Background-linhas.png);
   background-size: cover;
   background-repeat: no-repeat;

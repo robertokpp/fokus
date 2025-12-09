@@ -1,4 +1,4 @@
-.flex {
+.display-flex {
   display: flex;
 }
 .flex-jc {
@@ -90,6 +90,7 @@
   padding: 1.25rem;
   border-radius: 999px;
   border: 2px solid var(--lilas);
+  margin-block: 3rem;
   color: var(--lilas);
   background: none;
   font: var(--Paragraph);
