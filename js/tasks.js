@@ -13,9 +13,17 @@ const ul = document.querySelector("ul");
 const textEdit = document.querySelector(".task-edit");
 
 const listTask = [];
+const listTaskCompleted = []
+let checkEdit = false;
+let editId = 0;
 
 function listCreation(task) {
-  listTask.push(task);
+  if (checkEdit === true) {
+    listTask[editId] = task;
+    checkEdit = false
+  } else {
+    listTask.push(task);
+  }
   renderDisplay();
 }
 
@@ -40,7 +48,7 @@ function listEdit(task) {
   renderDisplay();
 }
 
-function listDelete() {
+function listDelete(item) {
   listTask.splice(task, 1);
   renderDisplay();
 }
@@ -60,17 +68,16 @@ btnSave.addEventListener("click", () => {
 });
 
 btnDelete.addEventListener("click", () => {
-  textTask.value = ""
+  
 });
-
 
 ul.addEventListener("click", (event) => {
   if (event.target.classList.contains("task-edit")) {
     addTask.style.display = "flex";
+    checkEdit = true;
     const li = event.target.closest("li");
-    const id = li.id;
-    console.log(id);
-    listEdit(id);
+    editId = li.id;
+    textTask.value = listTask[editId]
   }
 });
 
@@ -78,5 +85,6 @@ ul.addEventListener("click", (event) => {
   if (event.target.classList.contains("check-icons")) {
     const li = event.target.closest("li");
     li.classList.add("task-completed");
+    listTaskCompleted.push(li.id)
   }
 });
