@@ -13,14 +13,15 @@ const ul = document.querySelector("ul");
 const textEdit = document.querySelector(".task-edit");
 
 const listTask = [];
-const listTaskCompleted = []
+let listTaskCompleted = [];
 let checkEdit = false;
-let editId = 0;
+let editId = null;
 
 function listCreation(task) {
   if (checkEdit === true) {
     listTask[editId] = task;
-    checkEdit = false
+    checkEdit = false;
+    editId = null;
   } else {
     listTask.push(task);
   }
@@ -32,13 +33,16 @@ function renderDisplay() {
   listTask.forEach((item, index) => {
     const li = document.createElement("li");
     li.id = index;
-    ul.append(li);
     li.innerHTML = `<div>
-  <img class="check-icons" src="assets/Ícones/Check_branco.svg" alt="" />
-  <p>${item}</p>
-  </div>
-  <img value="${index}"class="task-edit" src="assets/Ícones/edit.svg" alt="" />
-  `;
+    <img class="check-icons" src="assets/Ícones/Check_branco.svg" alt="" />
+    <p>${item}</p>
+    </div>
+    <img value="${index}"class="task-edit" src="assets/Ícones/edit.svg" alt="" />
+    `;
+    if(listTaskCompleted.includes(index)){
+      li.classList.add("task-completed")
+    }
+    ul.append(li);
   });
 }
 
@@ -49,8 +53,10 @@ function listEdit(task) {
 }
 
 function listDelete(item) {
-  listTask.splice(task, 1);
+  listTask.splice(item, 1);
   renderDisplay();
+  editId = null;
+  textTask.value = "";
 }
 
 btnAddTask.addEventListener("click", () => {
@@ -68,23 +74,32 @@ btnSave.addEventListener("click", () => {
 });
 
 btnDelete.addEventListener("click", () => {
-  
+  listDelete(editId);
 });
 
+//EDITAR
 ul.addEventListener("click", (event) => {
   if (event.target.classList.contains("task-edit")) {
     addTask.style.display = "flex";
     checkEdit = true;
     const li = event.target.closest("li");
     editId = li.id;
-    textTask.value = listTask[editId]
+    textTask.value = listTask[editId];
   }
 });
 
+//TAREFA CONCLUIDA
 ul.addEventListener("click", (event) => {
   if (event.target.classList.contains("check-icons")) {
     const li = event.target.closest("li");
-    li.classList.add("task-completed");
-    listTaskCompleted.push(li.id)
+    let liId = Number(li.id)
+    if (li.classList.contains("task-completed")) {
+      let listAux = listTaskCompleted
+      listTaskCompleted = listAux.filter(n => n != liId)
+      li.classList.remove("task-completed");
+    } else {
+      li.classList.add("task-completed");
+      listTaskCompleted.push(liId);
+    }
   }
 });
