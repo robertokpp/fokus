@@ -16,16 +16,24 @@ const listTask = [];
 let listTaskCompleted = [];
 let checkEdit = false;
 let editId = null;
+let taskResult = null 
 
 function listCreation(task) {
-  if (checkEdit === true) {
-    listTask[editId] = task;
-    checkEdit = false;
-    editId = null;
+  if (confirm("Deseja salva essa tarefa?")) {
+    if (checkEdit === true) {
+      listTask[editId] = task;
+      checkEdit = false;
+      editId = null;
+    } else {
+      listTask.push(task);
+    }
+    renderDisplay();
+    taskResult = true
+    return taskResult;
   } else {
-    listTask.push(task);
+    taskResult = false
+    return taskResult;
   }
-  renderDisplay();
 }
 
 function renderDisplay() {
@@ -39,8 +47,8 @@ function renderDisplay() {
     </div>
     <img value="${index}"class="task-edit" src="assets/Ícones/edit.svg" alt="" />
     `;
-    if(listTaskCompleted.includes(index)){
-      li.classList.add("task-completed")
+    if (listTaskCompleted.includes(index)) {
+      li.classList.add("task-completed");
     }
     ul.append(li);
   });
@@ -53,14 +61,23 @@ function listEdit(task) {
 }
 
 function listDelete(item) {
-  listTask.splice(item, 1);
-  renderDisplay();
-  editId = null;
-  textTask.value = "";
+  if (confirm("Deseja Realmente excluir essa Tarefa?")) {
+    listTask.splice(item, 1);
+    renderDisplay();
+    editId = null;
+    textTask.value = "";
+  } else {
+    return;
+  }
 }
 
 btnAddTask.addEventListener("click", () => {
-  addTask.style.display = "flex";
+  if (addTask.style.display === "flex") {
+    alert("Voçe precisa salva essa tarefa");
+  } else {
+    addTask.style.display = "flex";
+    textTask.value = "";
+  }
 });
 
 btnCancel.addEventListener("click", () => {
@@ -69,8 +86,11 @@ btnCancel.addEventListener("click", () => {
 
 btnSave.addEventListener("click", () => {
   listCreation(textTask.value);
-  textTask.value = "";
-  addTask.style.display = "none";
+  console.log (taskResult)
+  if (taskResult === true) {
+    textTask.value = "";
+    addTask.style.display = "none";
+  }
 });
 
 btnDelete.addEventListener("click", () => {
@@ -92,10 +112,10 @@ ul.addEventListener("click", (event) => {
 ul.addEventListener("click", (event) => {
   if (event.target.classList.contains("check-icons")) {
     const li = event.target.closest("li");
-    let liId = Number(li.id)
+    let liId = Number(li.id);
     if (li.classList.contains("task-completed")) {
-      let listAux = listTaskCompleted
-      listTaskCompleted = listAux.filter(n => n != liId)
+      let listAux = listTaskCompleted;
+      listTaskCompleted = listAux.filter((n) => n != liId);
       li.classList.remove("task-completed");
     } else {
       li.classList.add("task-completed");
