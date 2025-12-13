@@ -1,8 +1,11 @@
-const time = document.getElementById("time");
+import { timeTeste } from "./panel-modo.js";
+
+const time = document.getElementById("time-focos");
 const btnPrimary = document.getElementById("btn-primary");
 const btnPause = document.getElementById("btn-pause");
+
 let isRunning = true;
-time.textContent = "25:00";
+time.textContent = timeTeste;
 
 let interval = null;
 let mm = 0;
@@ -14,13 +17,10 @@ function count() {
   if (isRunning === false) {
     mm = mmPause;
     s = sPause;
-    console.log("entrando no laço");
   } else {
     mm = 25;
     s = 0;
   }
-
-  // if (interval !== null) return;
 
   interval = setInterval(() => {
     if (mm === 0 && s === 0) {

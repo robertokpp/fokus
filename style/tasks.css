@@ -63,7 +63,7 @@
     }
     & .button-task {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       padding-top: 1rem;
       & div {
         display: flex;

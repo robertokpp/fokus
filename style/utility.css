@@ -62,6 +62,7 @@
   display: none;
 }
 
+
 & #btn-delete,
 #btn-cancel,
 #btn-save {
@@ -85,6 +86,9 @@
   color: white;
 }
 
+& #btn-delete{
+  display: none;
+}
 
 
 #btn-addtask{
