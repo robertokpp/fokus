@@ -1,25 +1,36 @@
-import { timeTeste } from "./panel-modo.js";
-
 const time = document.getElementById("time-focos");
 const btnPrimary = document.getElementById("btn-primary");
 const btnPause = document.getElementById("btn-pause");
 
-let isRunning = true;
-time.textContent = timeTeste;
+let mm = null;
+let s = null;
+export function renderHour(mmNew, ssNew) {
+  if (mmNew < 10) {
+    time.textContent = `0${mmNew}:0${ssNew}`;
+  } else {
+    time.textContent = `${mmNew}:0${ssNew}`;
+  }
+  mm = mmNew;
+  s = ssNew;
+}
 
-let interval = null;
-let mm = 0;
-let s = 0;
-let sPause = 0;
-let mmPause = 0;
+renderHour(25, 0);
+
+let isRunning = true;
+
+export function renderIsRunnig(item) {
+  isRunning = item;
+}
+
+export let interval = null;
+
+let sPause = null;
+let mmPause = null;
 
 function count() {
   if (isRunning === false) {
     mm = mmPause;
     s = sPause;
-  } else {
-    mm = 25;
-    s = 0;
   }
 
   interval = setInterval(() => {
@@ -54,12 +65,12 @@ btnPause.addEventListener("click", function () {
   clearInterval(interval);
   btnPrimary.classList.remove("display-none");
   btnPause.classList.add("display-none");
-  isRunning = false;
+  renderIsRunnig(false);
 });
 
 btnPrimary.addEventListener("click", function () {
   btnPrimary.classList.add("display-none");
   btnPause.classList.remove("display-none");
   count();
-  isRunning = true;
+  renderIsRunnig(true);
 });
