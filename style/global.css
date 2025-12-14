@@ -58,7 +58,7 @@ body {
 }
 
 & .backgroudtwo {
-  background-image: url(/assets/Imagens/Background-linhas.png);
+  background-image: url(../assets/Imagens/Background-linhas.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
