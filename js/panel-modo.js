@@ -1,4 +1,5 @@
 import { renderHour, interval, renderIsRunnig } from "./time.js";
+const bgGradient = document.getElementById("bg-gradient")
 const btnPrimary = document.getElementById("btn-primary");
 const btnPause = document.getElementById("btn-pause");
 const focos = document.getElementById("foco");
@@ -10,12 +11,11 @@ let ssPainel = 0;
 
 focos.style.background = "#144480";
 
-
-
 focos.addEventListener("click", () => {
   focos.style.background = "#144480";
   shortRest.style.background = "none";
   longeRest.style.background = "none";
+  bgGradient.className = "body-gradient-one"
   clearInterval(interval);
   renderIsRunnig(true);
   mmPainel = 25;
@@ -29,6 +29,7 @@ shortRest.addEventListener("click", () => {
   focos.style.background = "none";
   shortRest.style.background = "#144480";
   longeRest.style.background = "none";
+  bgGradient.className = "body-gradient-two"
   mmPainel = 5;
   ssPainel = 0;
   clearInterval(interval);
@@ -42,7 +43,8 @@ longeRest.addEventListener("click", () => {
   focos.style.background = "none";
   shortRest.style.background = "none";
   longeRest.style.background = "#144480";
-  mmPainel = 15;
+  bgGradient.className = "body-gradient-thee"
+  mmPainel = 15;  
   ssPainel = 0;
   clearInterval(interval);
   renderIsRunnig(true);

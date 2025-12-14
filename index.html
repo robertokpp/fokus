@@ -17,12 +17,13 @@
     <title>Fokus</title>
   </head>
   <body>
-    <div class="logo">
-      <img src="assets/Logo e Favicons/Logo.png" alt="logo do projeto" />
-    </div>
-    <div class="backgroud">
-      <section class="container" id="section-time">
-        <!-- <header class="panel-text">
+    <div id="bg-gradient" class="body-gradient-one">
+      <div class="backgroudtwo">
+        <div class="logo">
+          <img src="assets/Logo e Favicons/Logo.png" alt="logo do projeto" />
+        </div>
+        <section class="container" id="section-time">
+          <!-- <header class="panel-text">
           <p>
             Otimize sua produtividade,<br />
             <span>mergulhe no que importa</span>
@@ -30,67 +31,66 @@
           <img src="assets/Imagens/Imagem foco.png" alt="" />
         </header> -->
 
-        <div id="main-panel" class="container">
-          <div class="modo">
-            <button id="foco">Foco</button>
-            <button id="short-rest">Descanso curto</button>
-            <button id="longe-rest">Descanso longo</button>
-          </div>
-
-          <div id="panel-hour">
-            <span id="time-focos"></span>
-          </div>
-          <div class="toggle-musictext">
-            <div class="toggle">
-              <input type="checkbox" name="music" id="music" />
-              <label for="music" class="switch">
-                <span class="slider"></span>
-              </label>
-              <audio
-                id="music-Foco"
-                loop
-                src="assets/Músicas e sons/Opções música foco/Intra-Neural.mp3"
-              ></audio>
+          <div id="main-panel" class="container">
+            <div class="modo">
+              <button id="foco">Foco</button>
+              <button id="short-rest">Descanso curto</button>
+              <button id="longe-rest">Descanso longo</button>
             </div>
-            <span class="music-text">Musica</span>
+
+            <div id="panel-hour">
+              <span id="time-focos"></span>
+            </div>
+            <div class="toggle-musictext">
+              <div class="toggle">
+                <input type="checkbox" name="music" id="music" />
+                <label for="music" class="switch">
+                  <span class="slider"></span>
+                </label>
+                <audio
+                  id="music-Foco"
+                  loop
+                  src="assets/Músicas e sons/Opções música foco/Intra-Neural.mp3"
+                ></audio>
+              </div>
+              <span class="music-text">Musica</span>
+            </div>
+
+            <div>
+              <button
+                class="btn-primary"
+                id="btn-primary"
+                type="button"
+                id="start"
+              >
+                <img src="assets/Ícones/play_arrow.svg" alt="" />
+                Começa
+              </button>
+              <button
+                class="btn-primary display-none"
+                id="btn-pause"
+                type="button"
+                id="start"
+              >
+                <img src="assets/Ícones/pause.svg" alt="" />
+                Pause
+              </button>
+            </div>
           </div>
 
-          
-          <div>
-            <button
-              class="btn-primary"
-              id="btn-primary"
-              type="button"
-              id="start"
-            >
-              <img src="assets/Ícones/play_arrow.svg" alt="" />
-              Começa
-            </button>
-            <button
-              class="btn-primary display-none"
-              id="btn-pause"
-              type="button"
-              id="start"
-            >
-              <img src="assets/Ícones/pause.svg" alt="" />
-              Pause
-            </button>
-          </div>
-        </div>
-
-        <!-- <div>
+          <!-- <div>
           <span>#Em andamento:</span>
           <span>Nome da tarefa em andamento</span>
         </div> -->
-      </section>
+        </section>
 
-      <section class="container" id="section-tasks">
-        <header class="header-task">
-          <span>Lista de tarefas:</span>
-          <img src="assets/Ícones/more_vert lilás.svg" alt="" />
-        </header>
+        <section class="container" id="section-tasks">
+          <header class="header-task">
+            <span>Lista de tarefas:</span>
+            <img src="assets/Ícones/more_vert lilás.svg" alt="" />
+          </header>
 
-        <ul class="list-task">
+          <ul class="list-task">
             <!-- <li class="task-completed">
               <div>
                 <img class="check-icons" src="assets/Ícones/Check_branco.svg" alt="" />
@@ -98,41 +98,42 @@
               </div>
               <img src="assets/Ícones/edit.svg" alt="" />
             </li> -->
-        </ul>
+          </ul>
 
-        <div class="add-task">
-          <span>Adicionando tarefa</span>
-          <textarea
-            name="text-task"
-            id="text-task"
-            placeholder="No que você está trabalhando?"
-            rows="6"
-          ></textarea>
+          <div class="add-task">
+            <span>Adicionando tarefa</span>
+            <textarea
+              name="text-task"
+              id="text-task"
+              placeholder="No que você está trabalhando?"
+              rows="6"
+            ></textarea>
 
-          <div class="button-task">
-            <button id="btn-delete">
-              <img src="assets/Ícones/delete.svg" alt="" />
-              Deletar
-            </button>
-
-            <div>
-              <button id="btn-cancel">
-                <img src="assets/Ícones/close (1).svg" alt="" />
-                Cancelar
+            <div class="button-task">
+              <button id="btn-delete">
+                <img src="assets/Ícones/delete.svg" alt="" />
+                Deletar
               </button>
-              <button id="btn-save">
-                <img src="assets/Ícones/save_small.svg" alt="" />
-                Salvar
-              </button>
+
+              <div>
+                <button id="btn-cancel">
+                  <img src="assets/Ícones/close (1).svg" alt="" />
+                  Cancelar
+                </button>
+                <button id="btn-save">
+                  <img src="assets/Ícones/save_small.svg" alt="" />
+                  Salvar
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <button id="btn-addtask">
-          <img src="assets/Ícones/Add_lilás.png" alt="">
-          Adicionar nova tarefa</button>
-      </section>
+          <button id="btn-addtask">
+            <img src="assets/Ícones/Add_lilás.png" alt="" />
+            Adicionar nova tarefa
+          </button>
+        </section>
+      </div>
     </div>
-
     <footer>
       <p>
         Projeto fictício e sem fins comerciais. Imagens geradas por IA no Adobe

@@ -16,12 +16,6 @@ section {
   }
 }
 
-& .backgroud {
-  background-image: url(/assets/Imagens/Background-linhas.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 .logo {
   padding-block: 1rem;

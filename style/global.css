@@ -29,15 +29,15 @@
   );
   --liner-verde: linear-gradient(
     0deg,
-    rgba(15, 114, 92, 1) 0%,
+    rgba(1, 8, 14, 1) 0%,
     rgba(4, 24, 50, 1) 48%,
-    rgba(1, 8, 14, 1) 100%
+    rgba(15, 114, 92, 1) 100%
   );
   --linear-azul: linear-gradient(
     0deg,
-    rgba(24, 117, 233, 1) 0%,
+    rgba(1, 8, 14, 1) 0%,
     rgba(4, 24, 50, 1) 48%,
-    rgba(1, 8, 14, 1) 100%
+    rgba(24, 117, 233, 1) 100%
   );
   --linear-botao: linear-gradient(
     0deg,
@@ -53,10 +53,26 @@
   --fundo-tarefas: #00f4bf;
   --check: #02cda1;
 }
-
 body {
-  background-image: var(--linear-focos);
   color: #ffffff;
 }
 
+& .backgroudtwo {
+  background-image: url(/assets/Imagens/Background-linhas.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
+.body-gradient-one {
+  background-image: var(--linear-focos);
+  transition: 1s ease-in-out;
+}
+.body-gradient-two {
+  background-image: var(--liner-verde);
+  transition: 1s ease-in-out;
+}
+.body-gradient-thee {
+  background-image: var(--linear-azul);
+  transition: 1s ease-in-out;
+}
