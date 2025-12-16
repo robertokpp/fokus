@@ -16,24 +16,17 @@ const listTask = [];
 let listTaskCompleted = [];
 let checkEdit = false;
 let editId = null;
-let taskResult = null 
+let taskResult = null;
 
 function listCreation(task) {
-  if (confirm("Deseja salva essa tarefa?")) {
-    if (checkEdit === true) {
-      listTask[editId] = task;
-      checkEdit = false;
-      editId = null;
-    } else {
-      listTask.push(task);
-    }
-    renderDisplay();
-    taskResult = true
-    return taskResult;
+  if (checkEdit === true) {
+    listTask[editId] = task;
+    checkEdit = false;
+    editId = null;
   } else {
-    taskResult = false
-    return taskResult;
+    listTask.push(task);
   }
+  renderDisplay();
 }
 
 function renderDisplay() {
@@ -86,11 +79,8 @@ btnCancel.addEventListener("click", () => {
 
 btnSave.addEventListener("click", () => {
   listCreation(textTask.value);
-  console.log (taskResult)
-  if (taskResult === true) {
-    textTask.value = "";
-    addTask.style.display = "none";
-  }
+  addTask.style.display = "none";
+  textTask.value = "";
 });
 
 btnDelete.addEventListener("click", () => {

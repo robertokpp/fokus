@@ -5,12 +5,12 @@
   justify-content: center;
 }
 
-.btn-primary {
-  background: var(--linear-botao) no-repeat;
+& .btn-primary {
+  background: var(--linear-botao) no-repeat fixed;
   padding-block: 0.5rem;
   padding-inline: 2rem;
   display: flex;
-  justify-self: center;
+  align-items: center;
   gap: 0.5rem;
   border: 1px solid transparent;
   border-radius: 999px;
