@@ -54,7 +54,7 @@ function listEdit(task) {
 }
 
 function listDelete(item) {
-  if (confirm("Deseja Realmente excluir essa Tarefa?")) {
+  if (confirm("Ao excluir, a tarefa será removida permanentemente. Deseja continuar?")) {
     listTask.splice(item, 1);
     renderDisplay();
     editId = null;
@@ -66,7 +66,7 @@ function listDelete(item) {
 
 btnAddTask.addEventListener("click", () => {
   if (addTask.style.display === "flex") {
-    alert("Voçe precisa salva essa tarefa");
+    alert("Sua tarefa ainda está pendente de salvamento.");
   } else {
     addTask.style.display = "flex";
     textTask.value = "";
@@ -78,9 +78,13 @@ btnCancel.addEventListener("click", () => {
 });
 
 btnSave.addEventListener("click", () => {
-  listCreation(textTask.value);
-  addTask.style.display = "none";
-  textTask.value = "";
+  if (textTask.value.trim() === "") {
+    alert("Ops! Parece que você esqueceu de escrever a tarefa.");
+  } else {
+    listCreation(textTask.value);
+    addTask.style.display = "none";
+    textTask.value = "";
+  }
 });
 
 btnDelete.addEventListener("click", () => {

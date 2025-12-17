@@ -87,7 +87,8 @@
 }
 
 & #btn-delete{
-  display: none;
+  display: flex;
+  justify-self: start;
 }
 
 
